@@ -1,5 +1,11 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Dog",
+      "request": "launch",
+      "mainClass": "Dog"
+    }
+  ]
 }
