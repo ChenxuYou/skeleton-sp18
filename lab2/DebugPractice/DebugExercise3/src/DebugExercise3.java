@@ -1,6 +1,8 @@
 /**
  * Created by jug on 1/22/18.
  */
+import edu.princeton.cs.algs4.In;
+
 public class DebugExercise3 {
     public static int countTurnips(In in) {
         int totalTurnips = 0;
@@ -10,8 +12,9 @@ public class DebugExercise3 {
             double cost = in.readDouble();
             int numAvailable = in.readInt();
             if (foodType.equals("turnip")) {
-                int newTotal = totalTurnips + numAvailable;
-                totalTurnips = newTotal;
+                System.out.println(
+                        "Adding turnips: " + numAvailable + " (Total: " + totalTurnips + ")");
+                totalTurnips += numAvailable;
             }
             in.readLine();
         }
@@ -20,6 +23,7 @@ public class DebugExercise3 {
 
     public static void main(String[] args) {
         In in = new In("foods.csv");
-        System.out.println(countTurnips(in));
+        int result = countTurnips(in);
+        System.out.println("Total turnips: " + result);
     }
 }
